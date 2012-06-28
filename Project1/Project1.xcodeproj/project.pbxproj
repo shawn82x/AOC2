@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F1295119159CF8910016A6F1 /* Warriors.m in Sources */ = {isa = PBXBuildFile; fileRef = F1295118159CF8910016A6F1 /* Warriors.m */; };
+		F129511D159D0A350016A6F1 /* knightClass.m in Sources */ = {isa = PBXBuildFile; fileRef = F129511C159D0A350016A6F1 /* knightClass.m */; };
+		F1295120159D0A740016A6F1 /* spearClass.m in Sources */ = {isa = PBXBuildFile; fileRef = F129511F159D0A740016A6F1 /* spearClass.m */; };
+		F1295123159D0A8D0016A6F1 /* archerClass.m in Sources */ = {isa = PBXBuildFile; fileRef = F1295122159D0A8D0016A6F1 /* archerClass.m */; };
+		F1295126159D0AC30016A6F1 /* warriorFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = F1295125159D0AC30016A6F1 /* warriorFactory.m */; };
 		F1EAA66D159AA8B4009D78EA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1EAA66C159AA8B4009D78EA /* UIKit.framework */; };
 		F1EAA66F159AA8B4009D78EA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1EAA66E159AA8B4009D78EA /* Foundation.framework */; };
 		F1EAA671159AA8B4009D78EA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1EAA670159AA8B4009D78EA /* CoreGraphics.framework */; };
@@ -19,6 +24,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F1295117159CF8910016A6F1 /* Warriors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Warriors.h; path = ../Warriors.h; sourceTree = "<group>"; };
+		F1295118159CF8910016A6F1 /* Warriors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Warriors.m; path = ../Warriors.m; sourceTree = "<group>"; };
+		F129511B159D0A350016A6F1 /* knightClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = knightClass.h; sourceTree = "<group>"; };
+		F129511C159D0A350016A6F1 /* knightClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = knightClass.m; sourceTree = "<group>"; };
+		F129511E159D0A740016A6F1 /* spearClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = spearClass.h; sourceTree = "<group>"; };
+		F129511F159D0A740016A6F1 /* spearClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = spearClass.m; sourceTree = "<group>"; };
+		F1295121159D0A8D0016A6F1 /* archerClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = archerClass.h; sourceTree = "<group>"; };
+		F1295122159D0A8D0016A6F1 /* archerClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = archerClass.m; sourceTree = "<group>"; };
+		F1295124159D0AC30016A6F1 /* warriorFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = warriorFactory.h; sourceTree = "<group>"; };
+		F1295125159D0AC30016A6F1 /* warriorFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = warriorFactory.m; sourceTree = "<group>"; };
 		F1EAA668159AA8B4009D78EA /* Project1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Project1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1EAA66C159AA8B4009D78EA /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		F1EAA66E159AA8B4009D78EA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -86,6 +101,16 @@
 				F1EAA684159AA8B5009D78EA /* ViewController.h */,
 				F1EAA685159AA8B5009D78EA /* ViewController.m */,
 				F1EAA673159AA8B4009D78EA /* Supporting Files */,
+				F1295117159CF8910016A6F1 /* Warriors.h */,
+				F1295118159CF8910016A6F1 /* Warriors.m */,
+				F129511B159D0A350016A6F1 /* knightClass.h */,
+				F129511C159D0A350016A6F1 /* knightClass.m */,
+				F129511E159D0A740016A6F1 /* spearClass.h */,
+				F129511F159D0A740016A6F1 /* spearClass.m */,
+				F1295121159D0A8D0016A6F1 /* archerClass.h */,
+				F1295122159D0A8D0016A6F1 /* archerClass.m */,
+				F1295124159D0AC30016A6F1 /* warriorFactory.h */,
+				F1295125159D0AC30016A6F1 /* warriorFactory.m */,
 			);
 			path = Project1;
 			sourceTree = "<group>";
@@ -168,6 +193,11 @@
 				F1EAA679159AA8B4009D78EA /* main.m in Sources */,
 				F1EAA67D159AA8B4009D78EA /* AppDelegate.m in Sources */,
 				F1EAA686159AA8B5009D78EA /* ViewController.m in Sources */,
+				F1295119159CF8910016A6F1 /* Warriors.m in Sources */,
+				F129511D159D0A350016A6F1 /* knightClass.m in Sources */,
+				F1295120159D0A740016A6F1 /* spearClass.m in Sources */,
+				F1295123159D0A8D0016A6F1 /* archerClass.m in Sources */,
+				F1295126159D0AC30016A6F1 /* warriorFactory.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,6 +317,7 @@
 				F1EAA68B159AA8B5009D78EA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
