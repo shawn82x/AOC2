@@ -10,4 +10,27 @@
 
 @implementation Warriors
 
+-(id)init
+{
+    self = [super init];
+    if (self != nil)
+    {
+        
+    }
+    return self;
+};
+
+-(int)getDmg
+{
+    NSLog(@"I do %i damage.", dmgPerHit);
+    return dmgPerHit;
+}
+
+
+-(NSString*)getName
+{
+    NSLog(@"I am a %@.", warriorName);
+    return warriorName;
+}
+
 @end

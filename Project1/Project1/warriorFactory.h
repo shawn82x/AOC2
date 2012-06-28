@@ -8,6 +8,12 @@
 
 #import <Foundation/Foundation.h>
 
+#import "Warriors.h"
+#import "knightClass.h"
+#import "spearClass.h"
+#import "archerClass.h"
+
 @interface warriorFactory : NSObject
++(Warriors*)Army : (NSInteger)warriorClass;
 
 @end
