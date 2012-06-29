@@ -8,6 +8,31 @@
 
 #import "warriorFactory.h"
 
+#import "Warriors.h"
+#import "knightClass.h"
+#import "spearClass.h"
+#import "archerClass.h"
+
 @implementation warriorFactory
+
+-(Warriors*)getWarrior:(int)warriorType
+{
+    if (warriorType == 0)
+    {
+        return [[knightClass alloc] init];
+    }
+    else if (warriorType == 1)
+    {
+        return [[spearClass alloc] init]; 
+    }
+    else if (warriorType == 2)
+    {
+        return [[archerClass alloc] init];
+    }
+    else
+    {
+        return nil;   
+    }
+}
 
 @end

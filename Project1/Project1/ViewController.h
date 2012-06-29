@@ -10,10 +10,7 @@
 
 @interface ViewController : UIViewController
 {
-    UILabel *knightLabel;
-    UILabel *spearLabel;
-    UILabel *archerLabel;
-    UILabel *typeLabel;
+    UILabel *warriorLabel;
 }
 
 @end

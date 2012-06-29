@@ -10,4 +10,26 @@
 
 @implementation spearClass
 
+-(id)init
+{
+    if (self = [super init])
+    {
+        warriorType = 1;
+        warriorDmg = 4;
+        warriorName = @"Spearman";
+        warriorWounds = false;
+    }
+    return self;
+}
+
+-(NSString*)getWarriorWounds
+{
+    if (warriorWounds == true)
+    {
+        return @"wounded!";
+    } else {
+        return @"uninjured";
+    }
+}
+
 @end

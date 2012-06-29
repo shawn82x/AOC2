@@ -7,7 +7,25 @@
 //
 
 #import "archerClass.h"
+#import "Warriors.h"
 
 @implementation archerClass
+
+-(id)init
+{
+    if (self = [super init])
+    {
+        warriorType = 2;
+        warriorDmg = 2;
+        warriorName = @"Archer";
+        arrowsRemaining = 12;
+    }
+    return self;
+}
+
+-(int)getArrowsRemaining
+{
+    return arrowsRemaining;
+}
 
 @end

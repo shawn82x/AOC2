@@ -25,37 +25,43 @@
     knightClass *myKnightClass = [[knightClass alloc] init];
     if (myKnightClass != nil)
     {
-        warriorInfoLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 320, 50)];
-        warriorInfoLabel.text = [NSString stringWithFormat:@"%@ has a value of %d.", [myKnightClass getName], [myKnightClass getValue]];
-        [self.view addSubview:knightLabel];
+        warriorLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 10, 320, 50)];
+        warriorLabel.text = [NSString stringWithFormat:@"The %@ has a Damage Rating of %d.", [myKnightClass getWarriorName], [myKnightClass getWarriorDmg]];
+        warriorLabel.textColor = [UIColor redColor];
+        [self.view addSubview:warriorLabel];
         
-        warriorInfoLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 50, 320, 50)];
-        warriorInfoLabel.text = [NSString stringWithFormat:@"The %@ is %@.", [myKnightClass getName], [myKnightClass getGemColor]];
-        [self.view addSubview:warriorInfoLabel];
+        warriorLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 60, 320, 50)];
+        warriorLabel.text = [NSString stringWithFormat:@"The %@ wears %@ armor.", [myKnightClass getWarriorName], [myKnightClass getWarriorArmor]];
+        warriorLabel.textColor = [UIColor redColor];
+        [self.view addSubview:warriorLabel];
     }
     
     spearClass *mySpearClass = [[spearClass alloc] init];
     if (mySpearClass != nil)
     {
-        warriorInfoLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 100, 320, 50)];
-        warriorInfoLabel.text = [NSString stringWithFormat:@"%@ has a value of %d.", [mySpearClass getName], [mySpearClass getGemValue]];
-        [self.view addSubview:gemInfoLabel];
+        warriorLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 110, 320, 40)];
+        warriorLabel.text = [NSString stringWithFormat:@"The %@ has a Damage Rating of %d.", [mySpearClass getWarriorName], [mySpearClass getWarriorDmg]];
+        warriorLabel.textColor = [UIColor blueColor];
+        [self.view addSubview:warriorLabel];
         
-        warriorInfoLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 150, 320, 50)];
-        warriorInfoLabel.text = [NSString stringWithFormat:@"The %@ is %@.", [mySpearClass getName], [mySpearClass getGemDamage]];
-        [self.view addSubview:warriorInfoLabel];
+        warriorLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 160, 320, 40)];
+        warriorLabel.text = [NSString stringWithFormat:@"The %@ is %@.", [mySpearClass getWarriorName], [mySpearClass getWarriorWounds]];
+        warriorLabel.textColor = [UIColor blueColor];
+        [self.view addSubview:warriorLabel];
     }
     
     archerClass *myArcherClass = [[archerClass alloc] init];
     if (myArcherClass != nil)
     {
-        warriorInfoLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 200, 320, 50)];
-        warriorInfoLabel.text = [NSString stringWithFormat:@"%@ has a value of %d.", [myArcherClass getName], [myArcherClass getGemValue]];
-        [self.view addSubview:warriorInfoLabel];
+        warriorLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 210, 320, 40)];
+        warriorLabel.text = [NSString stringWithFormat:@"The %@ has a Damage Rating of %d.", [myArcherClass getWarriorName], [myArcherClass getWarriorDmg]];
+        warriorLabel.textColor = [UIColor greenColor];
+        [self.view addSubview:warriorLabel];
         
-        warriorInfoLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 250, 320, 50)];
-        warriorInfoLabel.text = [NSString stringWithFormat:@"The %@ has %d cuts.", [myArcherClass getName], [myArcherClass getGemCuts]];
-        [self.view addSubview:warriorInfoLabel];
+        warriorLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 260, 320, 40)];
+        warriorLabel.text = [NSString stringWithFormat:@"The %@ has %d arrows remaining.", [myArcherClass getWarriorName], [myArcherClass getArrowsRemaining]];
+        warriorLabel.textColor = [UIColor greenColor];
+        [self.view addSubview:warriorLabel];
     }
     
     [super viewDidLoad];

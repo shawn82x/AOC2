@@ -14,6 +14,7 @@
 #import "archerClass.h"
 
 @interface warriorFactory : NSObject
-+(Warriors*)Army : (NSInteger)warriorClass;
+
+-(Warriors*)getWarrior:(int)warriorType;
 
 @end

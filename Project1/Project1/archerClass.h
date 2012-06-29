@@ -9,6 +9,11 @@
 #import <Foundation/Foundation.h>
 #import "Warriors.h"
 
-@interface archerClass : NSObject
+@interface archerClass : Warriors
+{
+    int arrowsRemaining;
+}
+
+-(int)getArrowsRemaining;
 
 @end

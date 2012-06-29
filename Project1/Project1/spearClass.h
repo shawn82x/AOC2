@@ -9,6 +9,11 @@
 #import <Foundation/Foundation.h>
 #import "Warriors.h"
 
-@interface spearClass : NSObject
+@interface spearClass : Warriors
+{
+    BOOL warriorWounds;
+}
+
+-(NSString*)getWarriorWounds;
 
 @end
