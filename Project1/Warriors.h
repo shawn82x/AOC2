@@ -19,12 +19,15 @@ typedef enum
 {
 @protected
     myWarrior warriorType;
-    int dmgPerHit;
+    int warriorDmg;
     NSString *warriorName;
 }
 
--(int)getDmg;
--(NSString*)getName;
+-(int)getWarriorDmg;
+-(NSString*)getWarriorName;
+-(void)setWarriorDmg : (int)newWarriorDmg;
+-(void)setWarriorName : (NSString*)newWarriorName;
+-(NSString*)printWarriorInfo;
 
 
 @end

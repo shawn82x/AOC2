@@ -12,25 +12,28 @@
 
 -(id)init
 {
-    self = [super init];
-    if (self != nil)
+    if (self = [super init])
     {
-        
+        warriorType = 0;
+        warriorDmg = 0;
+        warriorName = @"Warrior Name";
     }
     return self;
-};
-
--(int)getDmg
-{
-    NSLog(@"I do %i damage.", dmgPerHit);
-    return dmgPerHit;
 }
 
-
--(NSString*)getName
+-(NSString*)getWarriorName
 {
-    NSLog(@"I am a %@.", warriorName);
     return warriorName;
+}
+
+-(int)getWarriorDmg
+{
+    return warriorDmg;
+}
+
+-(void)setWarriorName:(NSString *)newWarriorName
+{
+    warriorName = newWarriorName;
 }
 
 @end

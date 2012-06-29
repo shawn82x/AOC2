@@ -9,6 +9,11 @@
 #import <Foundation/Foundation.h>
 #import "Warriors.h"
 
-@interface knightClass : NSObject
+@interface knightClass : Warriors
+{
+    NSString *warriorArmor;
+}
+
+-(NSString*)getWarriorArmor;
 
 @end

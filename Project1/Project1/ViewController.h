@@ -8,13 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-#import "Warriors.h"
-#import "knightClass.h"
-#import "spearClass.h"
-#import "archerClass.h"
-#import "warriorFactory.h"
-
-
 @interface ViewController : UIViewController
 {
     UILabel *knightLabel;
