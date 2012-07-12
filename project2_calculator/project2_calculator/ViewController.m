@@ -18,6 +18,12 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    // set default background color to "white"
+    self.view.backgroundColor = [UIColor whiteColor];
+    
+    // Set on/off switch default to "Off"
+    onSwitch.on = false;
 }
 
 - (void)viewDidUnload
@@ -38,6 +44,40 @@
 -(IBAction)onClick:(id)sender
 {
     
+}
+
+-(IBAction)infoClick:(id)sender
+{
+    
+}
+
+-(IBAction)plusClick:(id)sender
+{
+    
+}
+
+-(IBAction)equalClick:(id)sender
+{
+    
+}
+
+-(IBAction)colorClick:(id)sender
+{
+    
+}
+
+-(IBAction)clearClick:(id)sender
+{
+    
+}
+
+-(IBAction)onSwitched:(id)sender
+{
+    UISwitch *on_offSwitch = (UISwitch*)sender;
+    if (on_offSwitch != nil)
+    {
+        int tag = on_offSwitch.tag;
+    }
 }
 
 @end

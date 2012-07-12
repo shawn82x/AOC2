@@ -184,8 +184,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="onClick:" destination="2" eventType="touchUpInside" id="4vQ-sb-nAM"/>
-                                    <action selector="onClick:" destination="2" eventType="touchDragInside" id="Ioe-Ms-LM8"/>
+                                    <action selector="plusClick:" destination="2" eventType="touchUpInside" id="pQV-Jm-7KH"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Oe0-If-aNT">
@@ -200,7 +199,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="onClick:" destination="2" eventType="touchUpInside" id="oLy-Al-6A2"/>
+                                    <action selector="equalClick:" destination="2" eventType="touchUpInside" id="QAB-dF-Z39"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="B47-SB-eMW">
@@ -215,12 +214,15 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="onClick:" destination="2" eventType="touchUpInside" id="OKK-z3-JiI"/>
+                                    <action selector="clearClick:" destination="2" eventType="touchUpInside" id="prc-GD-58n"/>
                                 </connections>
                             </button>
-                            <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" id="kwe-BW-o72">
+                            <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="kwe-BW-o72">
                                 <rect key="frame" x="221" y="41" width="79" height="27"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="onSwitched:" destination="2" eventType="valueChanged" id="QT3-On-L4B"/>
+                                </connections>
                             </switch>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="hnB-LZ-5vi">
                                 <rect key="frame" x="20" y="97" width="280" height="31"/>
@@ -240,7 +242,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="onClick:" destination="2" eventType="touchUpInside" id="3aT-W7-YeD"/>
+                                    <action selector="colorClick:" destination="2" eventType="touchUpInside" id="u9G-dF-Yr6"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="oQJ-bg-Aa9">
@@ -255,7 +257,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="onClick:" destination="2" eventType="touchUpInside" id="dp2-lx-0yo"/>
+                                    <action selector="colorClick:" destination="2" eventType="touchUpInside" id="w6Q-iz-y3H"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="P5y-5a-x87">
@@ -270,7 +272,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="onClick:" destination="2" eventType="touchUpInside" id="hYR-gN-NO6"/>
+                                    <action selector="colorClick:" destination="2" eventType="touchUpInside" id="VAv-0o-siC"/>
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="( press to change bacground color )" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="hni-QI-8V1">
@@ -292,24 +294,19 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="onClick:" destination="2" eventType="touchUpInside" id="bRe-te-w6n"/>
+                                    <action selector="infoClick:" destination="2" eventType="touchUpInside" id="N9j-SH-C7G"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.2340986465754471" green="0.51247608418367352" blue="0.339189149460635" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
+                    <connections>
+                        <outlet property="onSwitch" destination="kwe-BW-o72" id="xIJ-3e-Ubj"/>
+                    </connections>
                 </viewController>
             </objects>
         </scene>
     </scenes>
-    <classes>
-        <class className="ViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="onClick:"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
