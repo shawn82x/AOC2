@@ -43,38 +43,50 @@
 
 -(IBAction)onClick:(id)sender
 {
-    if (onSwitch.on == true) {
+    if (onSwitch.on == true) 
+    {
         UIButton *numClick = (UIButton*)sender;
-        if (numClick != nil) {
-            if (numClick.tag == 0) {
-                numInput.text = [[NSString alloc] initWithFormat:@"%@0", calcNum.text];
+        if (numClick != nil) 
+        {
+            if (numClick.tag == 0) 
+            {
+                calcView.text = [[NSString alloc] initWithFormat:@"%0", calcNum.text];
             }
-            else if (numClick.tag == 1) {
-                numInput.text = [[NSString alloc] initWithFormat:@"%@0", calcNum.text];
+            else if (numClick.tag == 1) 
+            {
+                calcView.text = [[NSString alloc] initWithFormat:@"%1", calcNum.text];
             }
-            else if (numClick.tag == 2) {
-                numInput.text = [[NSString alloc] initWithFormat:@"%@0", calcNum.text];
+            else if (numClick.tag == 2) 
+            {
+                calcView.text = [[NSString alloc] initWithFormat:@"%2", calcNum.text];
             }
-            else if (numClick.tag == 3) {
-                numInput.text = [[NSString alloc] initWithFormat:@"%@0", calcNum.text];
+            else if (numClick.tag == 3) 
+            {
+                calcView.text = [[NSString alloc] initWithFormat:@"%3", calcNum.text];
             }
-            else if (numClick.tag == 4) {
-                numInput.text = [[NSString alloc] initWithFormat:@"%@0", calcNum.text];
+            else if (numClick.tag == 4) 
+            {
+                calcView.text = [[NSString alloc] initWithFormat:@"%4", calcNum.text];
             }
-            else if (numClick.tag == 5) {
-                numInput.text = [[NSString alloc] initWithFormat:@"%@0", calcNum.text];
+            else if (numClick.tag == 5) 
+            {
+                calcView.text = [[NSString alloc] initWithFormat:@"%5", calcNum.text];
             }
-            else if (numClick.tag == 6) {
-                numInput.text = [[NSString alloc] initWithFormat:@"%@0", calcNum.text];
+            else if (numClick.tag == 6) 
+            {
+                calcView.text = [[NSString alloc] initWithFormat:@"%6", calcNum.text];
             }
-            else if (numClick.tag == 7) {
-                numInput.text = [[NSString alloc] initWithFormat:@"%@0", calcNum.text];
+            else if (numClick.tag == 7) 
+            {
+                calcView.text = [[NSString alloc] initWithFormat:@"%7", calcNum.text];
             }
-            else if (numClick.tag == 8) {
-                numInput.text = [[NSString alloc] initWithFormat:@"%@0", calcNum.text];
+            else if (numClick.tag == 8) 
+            {
+                calcView.text = [[NSString alloc] initWithFormat:@"%8", calcNum.text];
             }
-            else if (numClick.tag == 9) {
-                numInput.text = [[NSString alloc] initWithFormat:@"%@0", calcNum.text];
+            else if (numClick.tag == 9) 
+            {
+                calcView.text = [[NSString alloc] initWithFormat:@"%9", calcNum.text];
             }
         }
     }
@@ -91,10 +103,10 @@
 
 -(IBAction)plusClick:(id)sender
 {
-    if (onSwitch == true)
+    if (onSwitch.on == true)
     {
-        c1 = [calcNum.text intValue];
-        calcNum.text = @"";
+        c1 = [calcView.text intValue];
+        calcView.text = @"";
     }
     else if (onSwitch.on == false)
     {
@@ -106,8 +118,8 @@
 {
     if (onSwitch.on == true)
     {
-        answ = c1 + [calcNum.text intValue];
-        calcNum.text = [NSString stringWithFormat:@"%d", answ];
+        answ = c1 + [calcView.text intValue];
+        calcView.text = [NSString stringWithFormat:@"%d", answ];
     }
     else if (onSwitch.on == false)
     {
@@ -117,18 +129,33 @@
 
 -(IBAction)colorClick:(id)sender
 {
-    
+    UIButton *bgControl = (UIButton*)sender;
+    if (bgControl != nil)
+    {
+        if (bgControl.tag == 12)
+        {
+            self.view.backgroundColor = [UIColor whiteColor];
+        }
+        else if (bgControl.tag == 13)
+        {
+            self.view.backgroundColor = [UIColor blueColor];
+        }
+        else if (bgControl.tag == 14)
+        {
+            self.view.backgroundColor = [UIColor greenColor];
+        }
+    }
 }
 
 -(IBAction)clearClick:(id)sender
 {
     if (onSwitch.on == true) 
     {
-        numInput.text = @"";
+        calcView.text = @"";
     }
     else if (onSwitch.on == false) 
     {
-        // Calculator is turned Off
+        calcView.text = @"";
     }
 }
 
