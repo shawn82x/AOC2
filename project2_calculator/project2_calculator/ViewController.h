@@ -10,7 +10,13 @@
 
 @interface ViewController : UIViewController
 {
+    
+    UILabel *calcNum;
+    UILabel *numInput;
     IBOutlet UISwitch *onSwitch;
+    IBOutlet UITextField *calcView;
+    int c1;
+    int answ;
 }
 
 -(IBAction)onClick:(id)sender;
@@ -25,6 +31,6 @@
 
 -(IBAction)clearClick:(id)sender;
 
--(IBAction)onSwitched:(id)sender;
+
 
 @end
