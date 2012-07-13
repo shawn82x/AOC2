@@ -164,5 +164,15 @@
     }
 }
 
+-(IBAction)moveSwitch:(id)sender
+{
+    UISwitch *flipSwitch = (UISwitch*)sender;
+    if (flipSwitch != nil)
+    {
+        calcView.text = @"";
+        c1 = 0;
+    }
+}
+
 
 @end

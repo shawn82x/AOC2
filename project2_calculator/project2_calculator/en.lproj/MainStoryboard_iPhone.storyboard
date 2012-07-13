@@ -220,6 +220,9 @@
                             <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="kwe-BW-o72">
                                 <rect key="frame" x="221" y="41" width="79" height="27"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="moveSwitch:" destination="2" eventType="valueChanged" id="ReG-DQ-OwR"/>
+                                </connections>
                             </switch>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0" textAlignment="right" minimumFontSize="14" id="hnB-LZ-5vi">
                                 <rect key="frame" x="20" y="97" width="280" height="31"/>
@@ -313,6 +316,7 @@
                 <relationship kind="action" name="colorClick:"/>
                 <relationship kind="action" name="equalClick:"/>
                 <relationship kind="action" name="infoClick:"/>
+                <relationship kind="action" name="moveSwitch:"/>
                 <relationship kind="action" name="onClick:"/>
                 <relationship kind="action" name="plusClick:"/>
                 <relationship kind="outlet" name="calcView" candidateClass="UITextField"/>

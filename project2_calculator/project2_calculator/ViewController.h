@@ -31,6 +31,8 @@
 
 -(IBAction)clearClick:(id)sender;
 
+-(IBAction)moveSwitch:(id)sender;
+
 
 
 @end
