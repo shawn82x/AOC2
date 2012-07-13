@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "SecondViewController.h"
 
 @interface ViewController ()
 
@@ -98,7 +99,11 @@
 
 -(IBAction)infoClick:(id)sender
 {
-    
+    SecondViewController *infoView = [[SecondViewController alloc] initWithNibName:@"SecondViewController" bundle:nil];
+    if (infoView != nil)
+    {
+        [self presentModalViewController:infoView animated:TRUE];
+    }
 }
 
 -(IBAction)plusClick:(id)sender

@@ -16,6 +16,8 @@
 		F175429315AD1A98003BDB3A /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F175429115AD1A98003BDB3A /* MainStoryboard_iPhone.storyboard */; };
 		F175429615AD1A98003BDB3A /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F175429415AD1A98003BDB3A /* MainStoryboard_iPad.storyboard */; };
 		F175429915AD1A98003BDB3A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F175429815AD1A98003BDB3A /* ViewController.m */; };
+		F18B228215AFBE3B004D16C1 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F18B228015AFBE3B004D16C1 /* SecondViewController.m */; };
+		F18B228315AFBE3B004D16C1 /* SecondViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F18B228115AFBE3B004D16C1 /* SecondViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +35,9 @@
 		F175429515AD1A98003BDB3A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
 		F175429715AD1A98003BDB3A /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		F175429815AD1A98003BDB3A /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		F18B227F15AFBE3B004D16C1 /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
+		F18B228015AFBE3B004D16C1 /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		F18B228115AFBE3B004D16C1 /* SecondViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SecondViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +91,9 @@
 				F175429715AD1A98003BDB3A /* ViewController.h */,
 				F175429815AD1A98003BDB3A /* ViewController.m */,
 				F175428615AD1A98003BDB3A /* Supporting Files */,
+				F18B227F15AFBE3B004D16C1 /* SecondViewController.h */,
+				F18B228015AFBE3B004D16C1 /* SecondViewController.m */,
+				F18B228115AFBE3B004D16C1 /* SecondViewController.xib */,
 			);
 			path = project2_calculator;
 			sourceTree = "<group>";
@@ -155,6 +163,7 @@
 				F175428A15AD1A98003BDB3A /* InfoPlist.strings in Resources */,
 				F175429315AD1A98003BDB3A /* MainStoryboard_iPhone.storyboard in Resources */,
 				F175429615AD1A98003BDB3A /* MainStoryboard_iPad.storyboard in Resources */,
+				F18B228315AFBE3B004D16C1 /* SecondViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -168,6 +177,7 @@
 				F175428C15AD1A98003BDB3A /* main.m in Sources */,
 				F175429015AD1A98003BDB3A /* AppDelegate.m in Sources */,
 				F175429915AD1A98003BDB3A /* ViewController.m in Sources */,
+				F18B228215AFBE3B004D16C1 /* SecondViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,6 +297,7 @@
 				F175429E15AD1A98003BDB3A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
