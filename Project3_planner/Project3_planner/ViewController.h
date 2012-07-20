@@ -20,5 +20,4 @@
 -(IBAction)mainClick:(id)sender;
 -(void)newEvent:(NSString *) addNewEvent;
 
-
 @end
