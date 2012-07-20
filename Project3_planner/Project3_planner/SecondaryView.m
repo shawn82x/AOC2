@@ -25,6 +25,12 @@
     return self;
 }
 
+// Close keyboard
+
+-(IBAction)closeKeyboard:(id)sender
+{
+    [newEvent resignFirstResponder];
+}
 
 // Close the SecondaryView and save/route data to UITextField on Main View
 
@@ -38,8 +44,9 @@
         if (dFormat != nil)
         {
             [dFormat setDateFormat:@"MMM dd, YYYY hh:mm aaa"];
+            NSString *setDate = [[NSString alloc] initWithFormat:@"%@", [dFormat stringFromDate:chosenDate]];
+            setDate = newEventDate;
         }
-        newEventDate = [dFormat stringFromDate:select];
     }
     
     // newEventText and date/time from the picker are appended for transfer to Main View.
