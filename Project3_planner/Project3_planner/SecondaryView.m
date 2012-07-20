@@ -14,6 +14,8 @@
 
 @implementation SecondaryView
 
+@synthesize delegate;
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -22,6 +24,34 @@
     }
     return self;
 }
+
+
+// Close the SecondaryView and save/route data to UITextField on Main View
+
+-(IBAction)saveClick:(id)sender
+{
+    datePicker.minimumDate = [NSDate date];
+    NSDate *chosenDate = [datePicker date];
+    if (chosenDate != nil)
+    {
+        NSDateFormatter *dFormat = [[NSDateFormatter alloc] init];
+        if (dFormat != nil)
+        {
+            [dFormat setDateFormat:@"MMM dd, YYYY hh:mm aaa"];
+        }
+        newEventDate = [dFormat stringFromDate:select];
+    }
+    
+    // newEventText and date/time from the picker are appended for transfer to Main View.
+    
+    [self dismissModalViewControllerAnimated:TRUE];
+    if (delegate != nil)
+    {
+        newEventText = [NSString stringWithFormat:@"%@ \n%@ \n", newEvent.text, newEventDate];
+    }
+}
+
+#pragma mark - view lifecycle
 
 - (void)viewDidLoad
 {
@@ -40,5 +70,8 @@
 {
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
+
+
+
 
 @end

@@ -7,7 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SecondaryView.h"
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <eventDelegate>
+{
+    @public
+    IBOutlet UITextView *eventView;
+    NSString *addNewEvent;
+}
+
+-(IBAction)eventInfo:(id)sender;
+-(IBAction)mainClick:(id)sender;
+-(void)newEvent:(NSString *) addNewEvent;
+
 
 @end

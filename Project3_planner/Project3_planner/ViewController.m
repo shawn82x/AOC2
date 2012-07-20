@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "SecondaryView.h"
 
 @interface ViewController ()
 
@@ -33,6 +34,24 @@
     } else {
         return YES;
     }
+}
+
+
+// "Add Event" button switches to SecondaryView
+-(IBAction)mainClick:(id)sender
+{
+    SecondaryView *viewController = [[SecondaryView alloc] initWithNibName:@"SecondaryView" bundle:nil];
+    if (viewController != nil)
+    {
+        [self presentModalViewController:viewController animated:TRUE];
+    }
+}
+
+// Append data from "SecondaryView" to UITextView in Main View
+
+-(void)newEvent:(NSString *) addNewEvent
+{
+    eventView.text = [eventView.text stringByAppendingString:addNewEvent];
 }
 
 @end
