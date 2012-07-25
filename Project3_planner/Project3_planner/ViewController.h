@@ -9,15 +9,9 @@
 #import <UIKit/UIKit.h>
 #import "SecondaryView.h"
 
-@interface ViewController : UIViewController <eventDelegate>
-{
-    @public
-    IBOutlet UITextView *eventView;
-    NSString *addNewEvent;
-}
+@interface ViewController : UIViewController
 
--(IBAction)eventInfo:(id)sender;
--(IBAction)mainClick:(id)sender;
--(void)newEvent:(NSString *) addNewEvent;
+// UITex
+@property (strong, nonatomic) IBOutlet UITextView *textView;
 
 @end

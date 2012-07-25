@@ -14,6 +14,7 @@
 @end
 
 @implementation ViewController
+@synthesize textView;
 
 - (void)viewDidLoad
 {
@@ -47,11 +48,7 @@
     }
 }
 
-// Append data from "SecondaryView" to UITextView in Main View
 
--(void)newEvent:(NSString *) addNewEvent
-{
-    eventView.text = [eventView.text stringByAppendingString:addNewEvent];
-}
+
 
 @end
