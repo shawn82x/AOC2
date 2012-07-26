@@ -1,8 +1,8 @@
 //
 //  ViewController.m
-//  Project4
+//  Project4b
 //
-//  Created by Shawn Morgart on 7/25/12.
+//  Created by Shawn Morgart on 7/26/12.
 //  Copyright (c) 2012 Full Sail University. All rights reserved.
 //
 
