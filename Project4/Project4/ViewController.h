@@ -16,6 +16,13 @@
     NSString *event;
     // NSString *newEventString;
     NSString *eventText;
+    
+    // set up for Swipe 
+    IBOutlet UILabel *swipeLabel;
+    UISwipeGestureRecognizer *leftSwiper;
+    UISwipeGestureRecognizer *rightSwiper;
+    
+    
 }
 
 // Set up for button to change to SecondView

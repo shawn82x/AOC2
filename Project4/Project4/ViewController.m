@@ -19,7 +19,40 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    // set up Swipe recognition
+    rightSwiper = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(onSwipe:)];
+    rightSwiper.direction = UISwipeGestureRecognizerDirectionRight;
+    [swipeLabel addGestureRecognizer:rightSwiper];
+    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    if (defaults != nil) {
+        NSString *eventStringView = [defaults objectForKey:@"events"];
+        textView.text = eventStringView;
+    }
+    if ([textView.text isEqualToString:@""]) {
+        textView.text = @"All the events go here...";
+    }
 }
+
+-(void)onSwipe:(UISwipeGestureRecognizer*)recognizer
+{
+    if (recognizer.direction == UISwipeGestureRecognizerDirectionLeft)
+    {
+        
+    }
+    else if (recognizer.direction == UISwipeGestureRecognizerDirectionRight)
+    {
+        // set up action to change from main view to second view
+        SecondViewController *secondPage = [[SecondViewController alloc] initWithNibName:@"SecondViewController"bundle:nil];
+        if (secondPage != nil)
+        {
+            secondPage.delegate = self;
+            [self presentModalViewController:secondPage animated:TRUE];
+        }
+    }
+}
+
 
 - (void)viewDidUnload
 {
@@ -36,6 +69,7 @@
     }
 }
 
+
 -(IBAction)mainClick:(id)sender
 {
     // set up action to change from main view to second view
@@ -51,7 +85,7 @@
 -(void)DidClose:(NSString *)newEventString
 {
     // check if any events are currently listed
-    if ([textView.text isEqualToString:@"You have not saved any events."])
+    if ([textView.text isEqualToString:@"All the events go here..."])
     {
         // if now events, replace default text with new event
         textView.text = newEventString;

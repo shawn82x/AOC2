@@ -25,6 +25,11 @@
     NSString *thisEvent;
     NSString *thisEventDate;
     
+    // set up for Swipe 
+    IBOutlet UILabel *swipeLabel2;
+    UISwipeGestureRecognizer *leftSwiper2;
+    UISwipeGestureRecognizer *rightSwiper2;
+    
     id<SecondViewControllerDelegate> delegate;
 }
 
