@@ -34,7 +34,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="mainClick:" destination="2" eventType="touchUpInside" id="ysc-HE-P04"/>
+                                    <action selector="mainClick:" destination="2" eventType="touchUpInside" id="4sx-ZP-64I"/>
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" text="All the events go here..." id="vi1-7E-IEy">

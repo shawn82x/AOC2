@@ -70,16 +70,16 @@
 }
 
 
--(IBAction)mainClick:(id)sender
-{
+//-(IBAction)mainClick:(id)sender
+//{
     // set up action to change from main view to second view
-    SecondViewController *secondPage = [[SecondViewController alloc] initWithNibName:@"SecondViewController" bundle:nil];
-    if (secondPage != nil)
-    {
-        secondPage.delegate = self;
-        [self presentModalViewController:secondPage animated:TRUE];
-    }
-}
+//    SecondViewController *secondPage = [[SecondViewController alloc] initWithNibName:@"SecondViewController" bundle:nil];
+//    if (secondPage != nil)
+//    {
+//        secondPage.delegate = self;
+//        [self presentModalViewController:secondPage animated:TRUE];
+//    }
+//}
 
 // return the text from text field in second view
 -(void)DidClose:(NSString *)newEventString
