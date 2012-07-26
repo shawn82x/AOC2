@@ -87,7 +87,7 @@
         NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
         if (dateFormat != nil)
         {
-            [dateFormat setDateFormat:@"MMM d, at hh:mm aaa"];
+            [dateFormat setDateFormat:@"MMM d, hh:mm aaa"];
             NSString *eventDate = [[NSString alloc] initWithFormat:@"%@", [dateFormat stringFromDate:currentDate]];
             thisDate = eventDate;
         }

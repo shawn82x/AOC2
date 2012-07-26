@@ -19,6 +19,16 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    // set up default data
+    NSUserDefaults *defaultData = [NSUserDefaults standardUserDefaults];
+    if (defaultData != nil) {
+        NSString *eventString = [defaultData objectForKey:@"events"];
+        textView.text = eventString;
+    }
+    if ([textView.text isEqualToString:@""]) {
+        textView.text = @"All the events go here...";
+    }
 }
 
 - (void)viewDidUnload
@@ -65,22 +75,22 @@
     }
 }
 
--(IBAction)mainClick:(id)sender
-{
+//-(IBAction)mainClick:(id)sender
+//{
     // set up action to change from main view to second view
-    SecondViewController *secondPage = [[SecondViewController alloc] initWithNibName:@"SecondViewController" bundle:nil];
-    if (secondPage != nil)
-    {
-        secondPage.delegate = self;
-        [self presentModalViewController:secondPage animated:TRUE];
-    }
-}
+//    SecondViewController *secondPage = [[SecondViewController alloc] initWithNibName:@"SecondViewController" bundle:nil];
+//    if (secondPage != nil)
+//    {
+//        secondPage.delegate = self;
+//        [self presentModalViewController:secondPage animated:TRUE];
+//    }
+//}
 
 // return the text from text field in second view
 -(void)DidClose:(NSString *)newEventString
 {
     // check if any events are currently listed
-    if ([textView.text isEqualToString:@"You have not saved any events."])
+    if ([textView.text isEqualToString:@"All the events go here..."])
     {
         // if now events, replace default text with new event
         textView.text = newEventString;
@@ -89,6 +99,17 @@
         // if there are previous events, append the new event to the previous events
         eventText = textView.text;
         textView.text = [eventText stringByAppendingString:newEventString];
+    }
+}
+
+-(IBAction)mainClick:(id)sender
+{
+    NSUserDefaults *defaultData = [NSUserDefaults standardUserDefaults];
+    if (defaultData != nil) 
+    {
+        NSString *eventString = textView.text;
+        [defaultData setObject:eventString forKey:@"events"];
+        [defaultData synchronize];
     }
 }
 
