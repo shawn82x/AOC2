@@ -14,7 +14,7 @@
     @public
     IBOutlet UITextView *textView;
     NSString *event;
-    NSString *newEventString;
+    // NSString *newEventString;
     NSString *eventText;
 }
 

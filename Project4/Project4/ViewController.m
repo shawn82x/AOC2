@@ -48,7 +48,7 @@
 }
 
 // return the text from text field in second view
--(void)DidClose:(NSString *)plannerString
+-(void)DidClose:(NSString *)newEventString
 {
     // check if any events are currently listed
     if ([textView.text isEqualToString:@"You have not saved any events."])
