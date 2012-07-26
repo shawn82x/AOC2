@@ -27,6 +27,35 @@
     // Release any retained subviews of the main view.
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    rightSwiper = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(onSwipe:)];
+    rightSwiper.direction = UISwipeGestureRecognizerDirectionRight;
+    [swipeLabel addGestureRecognizer:rightSwiper];
+    
+    [super viewWillAppear:animated];
+}
+
+// Set up "onSwipe" function to change to second page upon a "right swipe"
+- (void)onSwipe:(UISwipeGestureRecognizer*)recognizer
+{
+    if (recognizer.direction == UISwipeGestureRecognizerDirectionRight) 
+    {
+        // set up action to change from main view to second view
+        SecondViewController *secondPage = [[SecondViewController alloc] initWithNibName:@"SecondViewController" bundle:nil];
+        if (secondPage != nil)
+        {
+            secondPage.delegate = self;
+            [self presentModalViewController:secondPage animated:TRUE];
+        }
+
+    }
+    else 
+    {
+        // do nothing
+    }
+}
+
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {

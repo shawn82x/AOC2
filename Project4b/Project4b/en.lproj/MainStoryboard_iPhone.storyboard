@@ -23,7 +23,7 @@
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Slide Right to Add Event  " textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="qpL-Ud-hNV">
+                            <label opaque="NO" clipsSubviews="YES" contentMode="left" text="Slide Right to Add Event  " textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="qpL-Ud-hNV">
                                 <rect key="frame" x="0.0" y="410" width="320" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.071033991869999993" green="0.24454737870000001" blue="0.51247608420000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -57,6 +57,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="swipeLabel" destination="qpL-Ud-hNV" id="WMN-ZQ-RYc"/>
                         <outlet property="textView" destination="Nzr-qP-hof" id="L2b-Po-gke"/>
                     </connections>
                 </viewController>

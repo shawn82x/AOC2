@@ -11,11 +11,14 @@
 
 @interface ViewController : UIViewController <SecondViewControllerDelegate>
 {
-@public
+    @public
     IBOutlet UITextView *textView;
+    
     NSString *event;
-    // NSString *newEventString;
     NSString *eventText;
+    
+    IBOutlet UILabel *swipeLabel;
+    UISwipeGestureRecognizer *rightSwiper;
     
 }
 

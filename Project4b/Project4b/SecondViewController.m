@@ -39,6 +39,32 @@
     // e.g. self.myOutlet = nil;
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    leftSwiper = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(onSwipe2:)];
+    leftSwiper.direction = UISwipeGestureRecognizerDirectionLeft;
+    [swipeLabel2 addGestureRecognizer:leftSwiper];
+    
+    [super viewWillAppear:animated];
+}
+
+// Set up "onSwipe2" function to change to second page upon a "right swipe"
+- (void)onSwipe2:(UISwipeGestureRecognizer*)recognizer
+{
+    if (recognizer.direction == UISwipeGestureRecognizerDirectionLeft) 
+    {
+        thisEvent = textField.text;
+        thisEventDate = [[NSString alloc] initWithFormat:@"%@ \n %@ \n", thisEvent, thisDate];
+        [delegate DidClose:thisEventDate];
+        [self dismissModalViewControllerAnimated:TRUE];
+    }
+    else 
+    {
+        // do nothing
+    }
+}
+
+
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
@@ -61,7 +87,7 @@
         NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
         if (dateFormat != nil)
         {
-            [dateFormat setDateFormat:@"MMM d, yyyy hh:mm aaa"];
+            [dateFormat setDateFormat:@"MMM d, at hh:mm aaa"];
             NSString *eventDate = [[NSString alloc] initWithFormat:@"%@", [dateFormat stringFromDate:currentDate]];
             thisDate = eventDate;
         }
